@@ -1,0 +1,41 @@
+.featured_stories {
+    height: 41%;
+  }
+  
+  .featured {
+    display: flex;
+    flex: 1;
+    gap: 1.5rem;
+    margin-bottom: 1rem;  
+    transition: outline 0.3s ease;  
+  }
+  
+  .featured_img {
+    width: 40%;
+    object-fit: cover;
+  }
+  
+  .featured_stories_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .featured_title {
+    font-size: 1.25rem;
+  }
+  
+  .featured_stories_author {
+    font-size: 0.875em;
+  }
+  
+  .featured_link {
+    color: #ab711d;
+  }
+  
+  .top_author {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+  }
+ 

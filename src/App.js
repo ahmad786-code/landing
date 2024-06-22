@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import TopStories from './components/TopStories';
+import FeaturedStories from './components/FeaturedStories';
+import Subscriber from './components/Subscriber';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <main>
+        <section className="stories_section">
+          <div className="stories">
+            <div className="top">
+              <TopStories />
+            </div>
+            <div className="featured">
+              <FeaturedStories />
+            </div>
+          </div>
+          <Subscriber/>
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+
+  
+.top_img {
+    width: 100%;
+    object-fit: cover;
+    
+}
+.top_author {
+    margin-top: 1.25rem;
+}
+.top_title {
+    font-size: 1.25rem;
+}
+
+.top_date {
+    font-size: 0.875em;
+
+}
+
+.top_link {
+    color:  #ab711d;
+}
+
+.top_author {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+}

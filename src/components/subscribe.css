@@ -1,0 +1,40 @@
+.subscribe {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;  
+    padding-bottom: 50px;
+  }
+  
+  .subscribe_input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Makes the input rounded */
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    flex: 1;  
+  }
+  .subscribe_input::placeholder {
+    text-align: center;  
+
+  }
+  .subscribe_input:focus {
+    border-color: #000000; /* Change border color on focus */
+  }
+  
+  .subscribe_button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px; /* Makes the button rounded */
+    background-color: #000000;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe_button:hover {
+    background-color: #f0eaeab2;  
+    color: #000000;
+  }
+  
