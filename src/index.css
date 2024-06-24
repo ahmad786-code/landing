@@ -4,9 +4,17 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #f0eaea;
- height:  100vh;
+/* Light mode */
+body.light {
+  background-color: #ACACAC;
+  color: #000000;
+}
+ 
+
+/* Dark mode */
+body.dark {
+  background-color: #504107;
+  color: #ACACAC;
 }
 
 main {

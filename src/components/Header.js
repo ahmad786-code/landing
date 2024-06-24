@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './header.css'
 import Logo from '../logo.png'
+import { ThemeContext } from '../ThemeContext';
 
 
 const Header = () => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
     return (
-        <header className='header'>
+        <header className={`header ${theme}`}>
             <div className='nav'>
                 <div className='left'>
-                    <i class="fa fa-bars bars"></i>
+
                     <a className='link'>Post</a>
                 </div>
                 <div className='center'>
@@ -17,16 +20,18 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='right'>
-                    <button className='btn_blub'>
-                        <i class="fa-solid fa-lightbulb icon_blub"></i>
+                    <button className='btn_blub' onClick={toggleTheme}>
+                        
+                        <i className="fa-solid fa-lightbulb icon_blub"></i>
+                      
                     </button>
                     <button className='btn_sign'>
-                        <i class="fa fa-user"></i>
+                        <i className="fa fa-user"></i>
                         Sign In
                     </button>
                 </div>
-                <div  class="social_link">
-                    <a class="typewriter-override top-brand">Social Link.</a>
+                <div className="social_link">
+                    <a className="typewriter-override top-brand">Social Link.</a>
                 </div>
 
             </div>

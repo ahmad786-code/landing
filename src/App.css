@@ -9,5 +9,15 @@
  }
 
  .top {
-  flex: .8;
+  flex: 1;
+ }
+
+ @media screen and (max-width: 600px) {
+  .stories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+   }
  }

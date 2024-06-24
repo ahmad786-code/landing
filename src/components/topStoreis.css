@@ -1,28 +1,52 @@
 
-  
-.top_img {
-    width: 100%;
-    object-fit: cover;
-    
-}
-.top_author {
-    margin-top: 1.25rem;
-}
-.top_title {
-    font-size: 1.25rem;
+  .top_story_title.light {
+    width: fit-content;
+    font-size: calc(1.275rem + 0.3vw);
+    line-height: normal;
+    border-bottom: 2px solid   rgba(134, 134, 134, 0.863);
+    margin-bottom: 5px;
+  }
+
+  .top_story_title.dark {
+    width: fit-content;
+    font-size: calc(1.275rem + 0.3vw);
+    line-height: normal;
+    border-bottom: 2px solid  #3C3105;
+    margin-bottom: 5px;
+  }
+ /* styles.css */
+.top_stories {
+  padding: 20px;
 }
 
-.top_date {
-    font-size: 0.875em;
-
+.markdown-content img {
+  width: 100%;
+  height: auto;
 }
 
-.top_link {
-    color:  #ab711d;
+.markdown-content h1 {
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
-.top_author {
-    display: flex;
-    flex-direction: column;
-    row-gap: .5rem;
+.markdown-content .top_story_info {
+  margin-top: 10px;
+}
+
+.markdown-content .top_story_author {
+  color: #ab711d;
+}
+
+.markdown-content .top_story_date {
+  color: #777;
+  margin-left: 10px;
+}
+
+.markdown-content a {
+  color: #ab711d; /* Set link color to yellow */
+  text-decoration: none; /* Optional: remove underline */
+}
+
+.markdown-content a:hover {
+  text-decoration: underline; /* Optional: underline on hover */
 }

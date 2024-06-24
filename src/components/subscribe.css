@@ -42,4 +42,24 @@
     background-color: #f0eaeab2;  
     color: #000000;
   }
-  
+  .popup {
+    text-align: center;
+  }
+  .popup_btn {
+    width: 50%;
+    padding: .75rem 1rem;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 1rem;
+    cursor: pointer;
+  }
+
+  .popup_btn.light {
+    background-color: rgba(134, 134, 134, 0.863);
+    color: #000000;
+  }
+
+  .popup_btn.dark {
+    background-color:#3C3105;
+    color: #ACACAC;  
+  }
