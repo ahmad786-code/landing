@@ -8,7 +8,7 @@ import { ThemeContext } from '../ThemeContext';
  
 
 const TopStories = () => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
   const [markdownContent, setMarkdownContent] = useState('');
   
 
@@ -52,14 +52,14 @@ const TopStories = () => {
               const [author, date] = props.children[0].split('|');
               return (
                 <div className="top_story_info">
-                  <span className="top_story_author">{author.trim()}</span>
+                  <span className={`top_story_author ${theme}`}>{author.trim()}</span>
                   <span className="top_story_date">{date.trim()}</span>
                 </div>
               );
             }
             return <p {...props} />;
           },
-          a: ({ node, ...props }) => <a {...props} className="custom-link" target="_blank" rel="noopener noreferrer" />
+          a: ({ node, ...props }) => <a {...props} className={`custom-link ${theme}`} target="_blank" rel="noopener noreferrer" />
         }}
       />
     </div>

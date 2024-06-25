@@ -25,10 +25,7 @@ const Header = () => {
                         <i className="fa-solid fa-lightbulb icon_blub"></i>
                       
                     </button>
-                    <button className='btn_sign'>
-                        <i className="fa fa-user"></i>
-                        Sign In
-                    </button>
+                   
                 </div>
                 <div className="social_link">
                     <a className="typewriter-override top-brand">Social Link.</a>

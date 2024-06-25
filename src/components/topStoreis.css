@@ -33,8 +33,12 @@
   margin-top: 10px;
 }
 
-.markdown-content .top_story_author {
-  color: #ab711d;
+.markdown-content.light .top_story_author.light {
+  color: #ACACAC;  
+}
+
+.markdown-content.dark .top_story_author.dark {
+  color: #000;
 }
 
 .markdown-content .top_story_date {
@@ -42,11 +46,15 @@
   margin-left: 10px;
 }
 
-.markdown-content a {
-  color: #ab711d; /* Set link color to yellow */
-  text-decoration: none; /* Optional: remove underline */
+.markdown-content a.dark {
+  color: #ACACAC;   
+  text-decoration: none; 
+}
+.markdown-content a.light {
+  color: #000;   
+  text-decoration: none; 
 }
 
 .markdown-content a:hover {
-  text-decoration: underline; /* Optional: underline on hover */
+  text-decoration: underline; 
 }

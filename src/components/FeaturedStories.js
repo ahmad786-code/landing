@@ -1,5 +1,5 @@
- 
- 
+
+
 import React, { useState, useEffect, useContext } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -16,7 +16,7 @@ const FeaturedStories = () => {
     const fetchMarkdown = async () => {
       try {
         const storage = getStorage();
-        const markdownRef = ref(storage,  'markdown/featured_story.md');
+        const markdownRef = ref(storage, 'markdown/featured_story.md');
         const url = await getDownloadURL(markdownRef);
         const response = await fetch(url);
         const text = await response.text();
@@ -54,26 +54,35 @@ const FeaturedStories = () => {
     }).slice(0, 3); // Limit to 3 stories
   };
 
-  const stories = parseMarkdownContent(markdownContent);
-  console.log('Parsed Stories:', stories); // Log parsed stories to debug
-
   return (
     <article className='featured_stories'>
       <div>
         <h4 className={`featured_stories_title ${theme}`}>Featured Stories</h4>
       </div>
-      {stories.map(story => (
-        <div key={story.id} className='featured'>
-          <img className='featured_img' src={story.imgSrc} alt={story.title} />
-          <div className='featured_stories_content'>
-            <h5 className='featured_title'>{story.title}</h5>
-            <p className='featured_stories_author'>
-              By: <a href="#"  className={`featured_link ${theme}`}>{story.author}</a> | {story.date}
-            </p>
-          </div>
-        </div>
-      ))}
-    </article>
+      <ReactMarkdown
+        className="markdown-content"
+        remarkPlugins={[remarkGfm]}
+        children={markdownContent}
+        components={{
+          img: ({ node, ...props }) => <img {...props} />,
+          h1: ({ node, ...props }) => <h1 {...props} />,
+          p: ({ node, ...props }) => {
+            if (props.children.length && typeof props.children[0] === 'string' && props.children[0].includes('|')) {
+              const [author, date] = props.children[0].split('|');
+              return (
+                <div className="top_story_info">
+                  <span className="top_story_author">{author.trim()}</span>
+                  <span className="top_story_date">{date.trim()}</span>
+                </div>
+              );
+            }
+            return <p {...props} />;
+          },
+          a: ({ node, ...props }) => <a {...props} className="custom-link" target="_blank" rel="noopener noreferrer" />
+        }}
+      />
+ 
+    </article >
   );
 };
 
