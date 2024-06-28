@@ -19,7 +19,7 @@
   padding: 20px;
 }
 
-.markdown-content img {
+  img {
   width: 100%;
   height: auto;
 }
@@ -57,4 +57,12 @@
 
 .markdown-content a:hover {
   text-decoration: underline; 
+}
+
+.story-link.dark {
+  color: #ACACAC;   
+}
+
+.story-link.light {
+  color: #000;   
 }
