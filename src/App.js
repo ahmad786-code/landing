@@ -1,29 +1,29 @@
 
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Header from './components/Header';
-import TopStories from './components/TopStories';
-import FeaturedStories from './components/FeaturedStories';
-import Subscriber from './components/Subscriber';
+import Home from './screens/Home';
 import { ThemeProvider } from './ThemeContext';
+import TopStoryDetail from './screens/TopStoryDetail';
+import FeaturedStoryDetail from './screens/FeaturedStoryDetail';
 
 function App() {
   return (
     <>
       <ThemeProvider>
-        <Header />
-        <main>
-          <section className="stories_section">
-            <div className="stories">
-              <div className="top">
-                <TopStories />
-              </div>
-              <div className="featured">
-                <FeaturedStories />
-              </div>
-            </div>
-            <Subscriber />
-          </section>
-        </main>
+        <Router>
+          <div>
+          <Header />
+            <Routes>
+              
+              <Route path="/" element={<Home />} />
+              <Route path="/topDetails/:id" element={<TopStoryDetail />}/>
+              <Route path="/featureDetails/:id" element={<FeaturedStoryDetail />}/>
+           
+            </Routes>
+          </div>
+        </Router>
+
       </ThemeProvider >
     </>
   );

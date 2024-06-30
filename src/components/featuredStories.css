@@ -87,3 +87,7 @@
     }
   
    }
+
+   .story-link:hover {
+    cursor: pointer;
+   }
