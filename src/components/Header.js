@@ -13,7 +13,7 @@ const Header = () => {
             <div className='nav'>
                 <div className='left'>
 
-                    <Link  style={{ textDecoration: 'none' }} className='link'>Post</Link>
+                    <Link  style={{ textDecoration: 'none' }} className='link'>Thermoplae.</Link>
                 </div>
                 <div className='center'>
                     <div className='header__logo'>
