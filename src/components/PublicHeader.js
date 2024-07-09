@@ -5,7 +5,7 @@ import { ThemeContext } from '../ThemeContext';
 import { Link } from 'react-router-dom';
 
 
-const Header = () => {
+const PublicHeader = () => {
     const { theme, toggleTheme } = useContext(ThemeContext);
 
     return (
@@ -39,5 +39,5 @@ const Header = () => {
     )
 }
 
-export default Header
+export default PublicHeader
 
