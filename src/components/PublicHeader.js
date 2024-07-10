@@ -13,7 +13,7 @@ const PublicHeader = () => {
             <div className='nav'>
                 <div className='left'>
 
-                    <Link  style={{ textDecoration: 'none' }} className='link'>Thermoplae.</Link>
+                    <Link  style={{ textDecoration: 'none' }} className='link'>Thermopylae.</Link>
                 </div>
                 <div className='center'>
                     <div className='header__logo'>
